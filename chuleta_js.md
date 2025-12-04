@@ -21,6 +21,8 @@ debugger permite detener la ejecución en puntos específicos (breakpoints), ver
 
 console.clear borra la consola desde un punto dado. 
 
+
+
 ## Eventos
 
 ### 1. Atributo dentro de elemento HTML
@@ -35,4 +37,17 @@ function escribe_por_consola(){
     console.log('Botón clicado');
 }
 ```
+
+# FOR
+
+Un trozo de código que se repite un número DETERMINADO de vecez
+
+1. Primera versión del FOR: 
+
+```js
+ for (let i = 3; i < 10; i++){
+    console.log("Hola: ", i)
+ }
+```
+
 
