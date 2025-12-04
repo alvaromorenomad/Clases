@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+#contenedor_main {
+    background-color: lightgray;
+    font-weight: bold;
+}

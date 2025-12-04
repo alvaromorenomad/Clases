@@ -21,6 +21,8 @@ debugger permite detener la ejecución en puntos específicos (breakpoints), ver
 
 console.clear borra la consola desde un punto dado. 
 
+
+
 ## Eventos
 
 ### 1. Atributo dentro de elemento HTML
@@ -35,4 +37,72 @@ function escribe_por_consola(){
     console.log('Botón clicado');
 }
 ```
+
+# FOR
+
+Un trozo de código que se repite un número DETERMINADO de vecez
+
+1. Primera versión del FOR: 
+
+```js
+ for (let i = 3; i < 10; i++){
+    console.log("Hola: ", i)
+ }
+```
+
+## Seleccionar NODOS HTML
+## 1. Usar un identificador
+
+Todos los identificadores UNICOS generan una variable en js con el mismo nombre.
+
+```js
+ console.log(contenedor_main);
+```
+
+```html
+
+<div id="contenedor_main">
+
+    <h2>Hola cabecera</h2>
+
+</div>
+
+```
+
+## Pintar en la WEB
+
+Lo primero que hay que hacer es seleccionar un nodo (elemento html)
+Sustituye todo lo hay en el HTML. 
+
+```js
+contendor_main.innerHTML = '<h1>Nuevo código añadido por JS<h1>'
+```
+
+También se puede sumar contenido con el más igual
+
+
+
+```js
+contendor_main.innerHTML = contendor_main.innerHTML + '<h1>Nuevo código añadido por JS<h1>' 
+
+o
+
+contendor_main.innerHTML += '<h1>Nuevo código añadido por JS<h1>'
+``` 
+
+## 2. Usar un identificador Queryselector/queryselectorall (Recomendado)
+
+La mejor opción para usar seleccionar solo un elemento con selector concreto:
+
+```js
+let nodoContenedorMain = document.querySelector('.verde')
+```
+
+Para coger todos los elementos de un mismo selector, utilizamos 
+
+```js
+let nodoContenedorMain = document.querySelectorAll('.verde')
+```
+
+
 

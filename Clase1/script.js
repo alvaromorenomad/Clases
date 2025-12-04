@@ -56,3 +56,9 @@ do {
     console.log(i);
     i++;
 } while (i <= n);
+
+if (edad > 18){
+    console.log('Eres mayor')
+}else{
+    console.log('Eres pequeño')
+}
