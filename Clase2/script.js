@@ -28,3 +28,29 @@ console.log ('Archivo cargado');
  let entradaDeDatos = prompt('Introduce tu nombre');
 
  console.log(entradaDeDatos);
+
+ //SELECCIONAR contendor_main
+ //identificador = VARIABLE con ese nombre
+ 
+ console.log(contenedor_main);
+
+ //PINTO en la web. Innerhtml sobre escribe el contenido html base
+
+ contendor_main.innerHTML = contendor_main.innerHTML + '<h1>Nuevo código añadido por JS<h1>'
+
+ let nodoContenedorMain = document.querySelector('.verde')
+
+ //quiero hacer click en el botón
+
+ //quiero pintar 
+
+ function pintarEnEmojis(){
+    console.log('evento creado')
+    
+    const nodoEmojis = document.querySelector('#emojis');
+    
+    console.log(nodoEmojis);
+    
+    nodoEmojis.innerHTML += '1'; 
+
+ }
