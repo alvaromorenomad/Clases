@@ -1,107 +1,131 @@
 # JAVASCRIPT
 
-HTML es un lenguaje de marcados por lo que no se pueden crear flujos. No puede ir por un lado u otro según decidamos. JScript sigue puede hacer esto y por eso es un lenguaje de programación
-// para hacer comentarios en JS de una sola línea
-/* para comentarios en JS de bloque que tenga mucha más información y ocupe más. 
 
-Java y JS no tienen nada que ver. Java es un lenguaje de servidor (backend) y no se va a tocar. Un lenguaje de programación es un conjunto de intruscciones ordenadas que define que debería decir a un programa donde actuar, cuando y cómo hacerlo. Todo se 
+HTML -> Lenguaje de marcado
 
-JavaScript es un lenguaje de tipado débil, es decir, el tipo de los elementos es mutable dependiendo de como actuemos con ello. 
+JS -> Programar
 
-Pseudocódigo es un diagrama previo a la programación donde se expone visualmente el problema que tenemos que solucionar. Un pseudocódigo bien ordenado nos organiza la estructura del código programado. 
+## Operadores Lógicos
 
-console.log('hola mundo') pinta información en el navegador. Es como una especie de print de Python
+### NEGACION (!)
 
-function nombre_funcion ()
+| variable | !Variable1 |
+|---------|-------|
+|TRUE|  FALSE
+| FALSE | TRUE
 
-Define una función que luego se puede utilizar para activar un evento. El tipo de evento se define en el atributo html como <button onclick="escribe_por_consola()">pulsa</button> para que se ejecute cuando se pulse.
+### AND ( && )
 
-debugger permite detener la ejecución en puntos específicos (breakpoints), ver el valor de las variables en cada momento, inspeccionar el flujo de llamadas a funciones y modificar valores en tiempo real, lo que facilita mucho la localización de fallos en comparación con métodos como console.log()
+| cond1 | cond2 | cond1 AND cond2
+|---------|-------|-------|
+|TRUE|  TRUE  |  TRUE
+|TRUE|  FALSE  |  FALSE
+|FALSE|  TRUE  | FALSE  
+|FALSE|  FALSE  |  FALSE
 
 
-console.clear borra la consola desde un punto dado. 
+### OR ( || )
 
+| cond1 | cond2 | cond1 OR cond2
+|---------|-------|-------|
+|TRUE|  TRUE  |  TRUE
+|TRUE|  FALSE  |  TRUE
+|FALSE|  TRUE  | TRUE  
+|FALSE|  FALSE  |  FALSE
+
+
+## Seleccionar NODOS HTML
+### 1. Usar un identificador
+Todos los identificadores UNICOS generan una variable en JS con el mismo nombre.
+
+```html
+<div id="contenedor_main">
+    <h2> Hola cabecera </h2>
+</div>
+
+```
+### 2. Usar querySelector y querySelectorAll ( RECOMENDADO )
+
+```js
+
+// La MEJOR opción para seleccionar SOLO un elemento
+let nodoContenedorMain = document.querySelector( '#contenedor_main' );
+
+// Cuando queremos seleccionar más de uno
+let listaNodosVerde = document.querySelectorAll('.verde');
+```
+
+
+## Pintar en la web
+
+Primero seleccionar un nodo
+
+
+
+SUSTITUYE todo lo que hay
+```js
+
+let nodoContenedorMain = document.querySelector( '#contenedor_main' );
+nodoContenedorMain.innerHTML = '<h1>Nuevo Código añadido por JS</h1>';
+
+```
+
+Para mantener el contenido
+```js
+contenedor_main.innerHTML = contenedor_main.innerHTML + '<h1 class="destacado" >Nuevo Código añadido por JS</h1>'
+// Equivalente
+contenedor_main.innerHTML +=  '<h1 class="destacado" >Nuevo Código añadido por JS</h1>'
+
+```
+
+
+
+````js
+console.log(contenedor_main);
+
+
+````
 
 
 ## Eventos
 
-### 1. Atributo dentro de elemento HTML
+### 1. Atributo dentro de HTML 
 
+Uso un atributo de evento y tengo el nombre de la función con ()
 
 ```html
-<button onclick="escribe_por_consola()">pulsa</button>
+  <button onclick="escribe_por_consola()" > ¡Click me! </button>
 ```
 
-``` js
+```js
 function escribe_por_consola(){
     console.log('Botón clicado');
 }
 ```
 
-# FOR
-
-Un trozo de código que se repite un número DETERMINADO de vecez
-
-1. Primera versión del FOR: 
+## Añadir y quitar clases
 
 ```js
- for (let i = 3; i < 10; i++){
-    console.log("Hola: ", i)
- }
+  const nodoCuadrado = document.querySelector( '#miCuadrado' )
+    console.log( nodoCuadrado )
+
+    // Añadir una clase a cualquier NODO HTML INDIVIDUAL
+
+    nodoCuadrado.classList.add( 'rotando' )
 ```
 
-## Seleccionar NODOS HTML
-## 1. Usar un identificador
 
-Todos los identificadores UNICOS generan una variable en js con el mismo nombre.
 
-```js
- console.log(contenedor_main);
-```
+## For
+Un trozo de código que se repite un número **DETERMINADO** de veces
 
-```html
-
-<div id="contenedor_main">
-
-    <h2>Hola cabecera</h2>
-
-</div>
-
-```
-
-## Pintar en la WEB
-
-Lo primero que hay que hacer es seleccionar un nodo (elemento html)
-Sustituye todo lo hay en el HTML. 
-
-```js
-contendor_main.innerHTML = '<h1>Nuevo código añadido por JS<h1>'
-```
-
-También se puede sumar contenido con el más igual
-
+1. Primera versión de for
 
 
 ```js
-contendor_main.innerHTML = contendor_main.innerHTML + '<h1>Nuevo código añadido por JS<h1>' 
-
-o
-
-contendor_main.innerHTML += '<h1>Nuevo código añadido por JS<h1>'
-``` 
-
-## 2. Usar un identificador Queryselector/queryselectorall (Recomendado)
-
-La mejor opción para usar seleccionar solo un elemento con selector concreto:
-
-```js
-let nodoContenedorMain = document.querySelector('.verde')
-```
-
-Para coger todos los elementos de un mismo selector, utilizamos 
-
-```js
-let nodoContenedorMain = document.querySelectorAll('.verde')
+for( let i = 0; i<10 ; i++ ){
+    console.log('Hola: ', i);
+}
 ```
 
 
