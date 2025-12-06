@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+}
+
+.preguntas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 200px;
+    align-items: center;
+}
+
+#pregunta1 {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(161, 148, 148);
+    color:white;
+    font-size: 80px;
+}
+
+#pregunta2 {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(161, 148, 148);
+    color:white;
+    font-size: 80px;
+}
+
+#pregunta3 {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(161, 148, 148);
+    color:white;
+    font-size: 80px;
+}
