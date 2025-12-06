@@ -12,3 +12,10 @@ if (primer_numero > segundo_numero){
 }else if(primer_numero === segundo_numero){
     nodoContenedor.innerHTML = `El número 1: (${primer_numero}) es igual que el número 2: (${segundo_numero})`;
 }else{nodoContenedor.innerHTML = 'Alguno de los datos introducidos no son válidos. Asegúrate de que el valor introducido es un número y que no has añadido espacios'};
+
+/**
+ * Para añadir las mejoras, habría que añadir dos input al html con un botón y manejar en js el con .value en un función que se ejecute cuando se pulse el botón
+ * 
+ * 
+ * 
+ */
