@@ -80,9 +80,9 @@ function add_clase_rotando (){
     const nodoCuadrado = document.querySelector('#miCuadrado')
     console.log (nodoCuadrado)
 
-    // Añadir una clase a cualquier NOFO HTML INDIVIDUAL
+    // Añadir una clase a cualquier NODO HTML INDIVIDUAL
 
-    nodoCuadrado.classList.toggle('rotando')
+    nodoCuadrado.classList.add('rotando')
 
     //nodoCuadrado.classList.remove('rotando')
     //nodoCuadrado.classList.toggle('rotando') Esto es para que quite y ponga segun no esté.
