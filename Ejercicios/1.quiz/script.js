@@ -11,8 +11,8 @@ function ejecucion_quiz (){
         pregunta_italia === 'rome' ||
         pregunta_italia === 'Ciudad de Roma' ||
         pregunta_italia === 'ciudad de roma' ||
-        pregunta_italia === 'Rome')
-        {const pregunta_francia = prompt(`${nombre_introducido}, ¿Cuál es la capital de Francia?`);
+        pregunta_italia === 'Rome'){
+        const pregunta_francia = prompt(`${nombre_introducido}, ¿Cuál es la capital de Francia?`);
             if(pregunta_francia === 'Paris' ||
             pregunta_francia === 'paris' ||
             pregunta_francia === 'París' ||
@@ -32,7 +32,7 @@ function ejecucion_quiz (){
             }
     }else{const nodoFeedback = document.querySelector('#contenedor_respuestas');
         nodoFeedback.innerHTML = `${nombre_introducido}, tienes que estudiar más`;
-        }
+    }
 }
 
 
