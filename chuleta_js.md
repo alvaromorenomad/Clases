@@ -117,7 +117,7 @@ function escribe_por_consola(){
 
 
 ## For
-Un trozo de código que se repite un número **DETERMINADO** de veces
+Un trozo de código que se repite un número **DETERMINADO** de veces-
 
 1. Primera versión de for
 
@@ -125,6 +125,60 @@ Un trozo de código que se repite un número **DETERMINADO** de veces
 ```js
 for( let i = 0; i<10 ; i++ ){
     console.log('Hola: ', i);
+}
+```
+
+## Acceder a valores de input
+
+```js
+const nodoInputNumero = document.querySelector ('#entradaNumero')
+console.log(nodoInputNumero);
+const valorInput = nodoInputNumero.value; //String
+console.log(nodoinputnumero.valueAsNumber); //Para transformar a Number, normalmente el programa te lo hace, pero mejor usar esto o Number para transformar el tipo a Number. 
+```
+
+## Funciones
+
+Trozo de código que tiene un nombre. Sirven para aislar funcionalidad y dar RESPONSABILIDAD a cada módulo. 
+
+Hay que tratar que las funciones solo hagan una cosa (BUENA PRÁCTICA). Una función debe verse en menos de una pantalla. 
+
+Crean un contexto nuevo. 
+
+```js
+
+//El cometido de esta función es pintar en la web. Modifica el sistema
+function saluda(nombre, apellido){
+    nodoPrincipal.innerHTML = 'Hola ' + nombre + ' ' + apellido
+}
+
+//El cometido de esta función es devolver un resultado. 
+
+function isPar( numero_parametro ){
+    const resto = numero_parametro % 2;
+    console.log('entrada', numero_parametro)
+    if( resto === 0 ){
+        console.log('TRUE')
+        return true; // La salida de la función
+    }else{
+        console.log('FALSE')
+        return false;//La salida de la función
+    }
+}
+
+```
+
+Otra forma a parte de la clásica para definir funciones es;
+
+### Arrow function
+
+Necesitan ser definidas antes de ejecutarse. No crean nuevos contextos, acceden al contexto superior. Se utiliza mucho en REACT.
+
+```js
+// ARROW FUNCTION
+
+const otroSaludo = (nombre, apellido) => {
+    console.log ('Saludo otra vez a' + nombre + apellidos)
 }
 ```
 

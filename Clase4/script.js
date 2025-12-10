@@ -14,7 +14,7 @@
 // DEFINE LA FUNCION
 function quiz (){
 
-    let str_html = '<div>  dime la capital de Italia '
+    let str_html = '<div>  dime la capital de Italia ' // ESTO ES NUEVO E IMPORTANTE
 
     const nombreUsuario = prompt('Introduce el nombre');
     console.log(nombreUsuario);
