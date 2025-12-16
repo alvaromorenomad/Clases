@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+#introducir_datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#introducir_datos > input {
+    height: 30px;
+    width: 300px;
+}
+
+input::placeholder {
+    text-align: center;
+    font-size: 15px;
+    max-width: 100%;
+    min-width: 100%;
+    width: fit-content;
+    padding: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.resultados {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-top: 30px;
+}
