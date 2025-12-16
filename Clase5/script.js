@@ -66,7 +66,7 @@ function isPar (numero){
 // ARROW FUNCTION
 
 const otroSaludo = (nombre, apellido) => {
-    console.log ('Saludo otra vez a' + nombre + apellidos)
+    console.log ('Saludo otra vez a ' + nombre + apellido)
 }
 
 // FOR -> LISTAS
@@ -99,10 +99,10 @@ listaCompra.includes('Papel') // Averigua si este elemento está en el array.
 
 //Mezcla del FOR para recorrer una lista
 
-for (let x = 0, x < listaCompra.length, x++){
-    console.log(listaCompra [x])
+for (let x = 0; x < listaCompra.length; x++) {
+    console.log(listaCompra[x]);
 }
 
-for (let x = 0, x < listaCompra.length, x++){
-    nodoMilistaCompra.innerHTML =  '<li>' +  listaCompra[x] + '</li>'
+for (let x = 0; x < listaCompra.length; x++) {
+    nodoMiListaCompra.innerHTML += '<li>' + listaCompra[x] + '</li>';
 }
