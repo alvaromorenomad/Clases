@@ -62,13 +62,22 @@ Primero seleccionar un nodo
 
 
 
-SUSTITUYE todo lo que hay
+1. Cuando solo hay elemento seleccionado a la vez Queryselector.
 ```js
 
 let nodoContenedorMain = document.querySelector( '#contenedor_main' );
 nodoContenedorMain.innerHTML = '<h1>Nuevo Código añadido por JS</h1>';
 
 ```
+2. Cuando hay varios elementos, utilizamos el QueryselectorAll seguido de la clase. 
+
+```js
+
+let nodosContentedores = document.querySelectorAll ('.contenedores')
+//Para pintar en todos los elementos, utilizar un bucle For 
+
+```
+
 
 Para mantener el contenido
 ```js
@@ -83,7 +92,7 @@ console.log(contenedor_main);
 NOTA: Generar el elemento html completo antes de pintar. Ejemplo:
 
 ```js
-et str_html_alumnos = '';
+let str_html_alumnos = '';
 for (let x = 0; x < alumnos.length; x++){
 
     console.log(alumnos[x] );
@@ -144,12 +153,28 @@ for( let i = 0; i<10 ; i++ ){
 
 2. Otras versiones: 
 
-### FOR OF (solo cuando quiero recorrer un array COMPLETO):
+### FOR OF (solo cuando quiero recorrer un array COMPLETO) en sus valores:
 
 ```js
 for (const cadaAlumno of Alumnos){
     console.log(cadaAlumno);
 }
+```
+
+```js
+const limite = 100;
+let respuesta = false;
+for (const cadaNumero of numeros){
+    console.log (cadaNumero)
+    if (cadaNumero >= limite){
+        respuesta = true;
+        //break // Esta sentencia rompe el bucle cuando se cumple la condición, ya que al ser booleano solo necesita una coincidencia y el resto es tonteria.
+        return respuesta; // Es una opción mejor que el break, ya que cuando se encuentra un return se deja de ejecutar. 
+        console.log('Esto no se ejecuta');
+    }
+}
+
+
 ```
 
 ### FOR IN (Es un ciclo para recorrer los índices )
@@ -277,6 +302,10 @@ const otroSaludo = (nombre, apellido) => {
     console.log ('Saludo otra vez a' + nombre + apellidos)
 }
 ```
+
+### Función pura
+
+Esta es una función que independientemente las veces que se ejecute, siempre va a dar el mismo resultado. 
 
 
 
