@@ -76,15 +76,29 @@ contenedor_main.innerHTML = contenedor_main.innerHTML + '<h1 class="destacado" >
 // Equivalente
 contenedor_main.innerHTML +=  '<h1 class="destacado" >Nuevo Código añadido por JS</h1>'
 
-```
-
-
-
-````js
 console.log(contenedor_main);
 
+```
 
-````
+NOTA: Generar el elemento html completo antes de pintar. Ejemplo:
+
+```js
+et str_html_alumnos = '';
+for (let x = 0; x < alumnos.length; x++){
+
+    console.log(alumnos[x] );
+    str_html_alumnos += '<div class="ficha">' + alumnos[x] + '</div>';
+}
+
+const nodoGridAlumnos = document.querySelector('#gridAlumnos');
+nodoGridAlumnos.innerHTML = str_html_alumnos;
+```
+
+NOTA 2: Usar Template String. 
+```js
+${ variable } 
+
+```
 
 
 ## Eventos
@@ -128,6 +142,37 @@ for( let i = 0; i<10 ; i++ ){
 }
 ```
 
+2. Otras versiones: 
+
+### FOR OF (solo cuando quiero recorrer un array COMPLETO):
+
+```js
+for (const cadaAlumno of Alumnos){
+    console.log(cadaAlumno);
+}
+```
+
+### FOR IN (Es un ciclo para recorrer los índices )
+
+```js
+for (const indice in alumnos){
+    console.log(indice)
+}
+```
+
+## While
+
+Un grupo de sentencias que se repiten un número INDETERMINADO de veces. Se utiliza muy poco comparado con el For porque es muy peligroso. El enemigo de la progración son los bucles infinitos, y esto es muy dado a ello. 
+```js
+let edad = 0;
+
+while ( edad < 18 ){
+    edad++;
+    console.log("Estoy en el bucle", edad);
+
+}
+```
+
 ## Acceder a valores de input
 
 ```js
@@ -136,6 +181,57 @@ console.log(nodoInputNumero);
 const valorInput = nodoInputNumero.value; //String
 console.log(nodoinputnumero.valueAsNumber); //Para transformar a Number, normalmente el programa te lo hace, pero mejor usar esto o Number para transformar el tipo a Number. 
 ```
+
+## SWITCH
+
+```js
+
+// DIA de hoy
+
+const hoy = new Date();
+const dia = hoy.getDay();
+console.log(hoy);
+console.log(dia);
+
+/**
+ * VARIABLES DISCRETAS
+ * 
+ * En el método anterior, en el día que te devuelve un número correspondiente al dia de la semana empezando en 0 con el domingo. Son valores discretos. Una variable discreta es un tipo de variable que solo puede tomar un número finito o contable de valores, generalmente enteros, y no puede tener valores intermedios entre dos valores consecutivos
+ */
+
+let nombreDia= '';
+
+if (dia === 0){
+    nombreDia = 'Domingo';
+}else if (dia === 1){
+    nombreDia = 'Lunes';
+}
+
+// solo sirve para cuando tenemos variables discretas y estamos preguntando por IGUALDAs. 
+
+switch (dia){
+    case 0: 
+        nombreDia = 'Domingo';
+        break;
+    case 1: 
+        nombreDia = 'Lunes';
+        break;
+    case 2: 
+        nombreDia = 'Martes';
+        break; 
+        // Palabra reservada que rompe la ejecución en cualquier punto en el que se encuentre.  
+    case 3:
+        nombreDia = 'Miercoles';
+        break;
+    case 4:
+        nombreDia = 'Jueves';
+        break;
+    default:
+        nombreDia = 'Error';
+}
+```
+
+
 
 ## Funciones
 
