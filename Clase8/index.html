@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 
+        Recuerso BLOQUEANTE
+        -> ASYNC: Primero descarga y cuando este ejecutando BLOQUEANDO el resto de la construcción de la web.
+        -> DEFER: La ejecución va AL FINAL de la construcción de la web. 
+
+        Para evitar todo esto esto, es una buena práctica poner el <script> al final del body. Cuando tenemos elementos que se cargan solo desde el html. Si se cargan desde librerías por ejemplo, muchas veces es obligatorio ponerlo en el head. Ante esto, Async o defer. 
+    --> 
+
+    
+</head>
+<body>
+    <h1>Clase 8</h1>
+
+    <button onclick="pintar_azul()">AZULES</button>
+     <button onclick="cambioAncho()">ANCHO</button>
+
+    <div id="principal">
+    </div>
+
+    <div id="gridCuadrados">
+
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+
+    </div>
+
+    <div class="cuadrado"></div>
+        
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

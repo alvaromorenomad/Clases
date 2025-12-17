@@ -52,8 +52,9 @@ Todos los identificadores UNICOS generan una variable en JS con el mismo nombre.
 let nodoContenedorMain = document.querySelector( '#contenedor_main' );
 
 // Cuando queremos seleccionar más de uno
-let listaNodosVerde = document.querySelectorAll('.verde');
+let listaNodosVerde = document.querySelectorAll('.verde'); 
 ```
+Sin embargo, esto solo selecciona, lo que quieras hacerle a todos los elementos lo tienes que pasar por bucle For Of(encargado de pasar por todos los elementos de una lista)
 
 
 ## Pintar en la web
@@ -137,6 +138,11 @@ function escribe_por_consola(){
     nodoCuadrado.classList.add( 'rotando' )
 ```
 
+## Cambiar el estilo de un elemento. 
+
+```js
+//.style. puedo accer a cualquier propiedad de CSS
+cadaNodo.style.widht = anchoCuadrados + 'px';
 
 
 ## For
@@ -308,4 +314,94 @@ const otroSaludo = (nombre, apellido) => {
 Esta es una función que independientemente las veces que se ejecute, siempre va a dar el mismo resultado. 
 
 
+
+## MÉTODOS
+
+Cuando definimos un tipo de dato, vamos a tener herramientas (métodos):
+
+### NUMBER
+
+1. toFixed (redondear)
+
+### ARRAYS
+
+1. Push (añadir un elemento al final de la lista/array/)
+2. Pop (Elimina el último elemento)
+3. includes (Te dice si hay un elemento en la lista): frutas.includes('Manzana')
+4. unshift (para añadir un elemento al principio)
+5. shift (para eliminar el primer elemento)
+6. reverse (dar la vuelta al array)
+
+Nota: Hay elementos que mutan el objeto principal (push, includes, etc.), y esto es importante saberlo por el desarrollo en React. 
+
+## OBJETOS
+
+Ejemplo: 
+
+```js
+let pelicula = {
+    titulo:'Jurassic Park',
+    director: 'Steven Spielberg',
+    reparto: [
+        'Juan',
+        'Oscar'
+    ]
+}
+
+```
+
+Este objeto es como el diccionario de Python. Es un elemento compuesto por por pares atributo (variable) valor. Un atributo puede tener como valor también un array. 
+
+Al final, esto no deja de ser una array en esencia y por lo tanto, se le pueden aplicar todos los métodos y propiedades de las listas. 
+
+Para acceder individualmente, se tiene que poner el objeto seguido de un punto (.) y de su atributo.
+
+```js
+
+console.log(pelicula.titulo)
+
+```
+
+Se pueden también meter objetos dentro de objetos y para acceder a ellos hay que poner un punto extra seguido del nuevo atributo. 
+
+```js
+
+let pelicula = {
+    titulo:'Jurassic Park',
+    director: {
+        nombre:'Steven',
+        apellido: 'Spielberg'
+    },
+    reparto: [
+        'Juan',
+        'Oscar'
+    ]
+}
+
+console.log(pelicula.director.nombre)
+
+```
+
+Cuando una función se define como valor de un atributo dentro de un objeto, se llama Método. 
+
+```js
+
+let pelicula = {
+    titulo:'Jurassic Park',
+    saludo: function(){
+        //Esto es un Método. 
+    },
+    director: {
+        nombre:'Steven',
+        apellido: 'Spielberg'
+    },
+    reparto: [
+        'Juan',
+        'Oscar'
+    ]
+}
+
+console.log(pelicula.titulo)
+
+```
 

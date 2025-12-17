@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+#gridCuadrados {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cuadrado {
+    width: 100px;
+    aspect-ratio: 1/1; /** Esto mantiene la proporción del elemento cuando se reduce la pantalla*/
+    background-color: #c7c7c7;
+    margin: 5px;
+    transition: background 1s; /** Cada vez que esa propiedad Cambia, ya se apor CSS o por JS, lo hace despacio*/
+}
+
+.azul {
+    background-color: lightblue;
+}
+

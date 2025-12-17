@@ -10,7 +10,7 @@ function calcular_diametro (radio){
 
 function calcular_perimetro (radio){
     let perimetro = 2 * pi * radio;
-    return perimetro;
+    return perimetro.toFixed(2); //para redondear decimales
 }
 
 function calcular_area (radio){
@@ -21,7 +21,8 @@ function calcular_area (radio){
 function ejecutar_operaciones () {
 
     const nodoValorInput = document.querySelector ('#valor_radio');
-    const radio = Number(nodoValorInput.value);
+    const radio = Number(nodoValorInput.value); //.value devuelve un string
+    //.valueAsNumber devuelve un type Number
 
     let diametro = calcular_diametro(radio);
     let perimetro = calcular_perimetro(radio);
