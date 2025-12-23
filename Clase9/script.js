@@ -41,3 +41,9 @@ console.log(listaNodosCuadrados)
 for (const cadaCuadrado of listaNodosCuadrados){
     cadaCuadrado.classList.add('verde');
 }
+
+//Cuando clique en cada cuadrado, quiero que cambie de color. 
+
+const nodoMiBoton = document.querySelector('#miBoton');
+
+nodoMiBoton.addEventListener('click', function(){})
