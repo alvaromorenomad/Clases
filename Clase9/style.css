@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+
+#principal {
+    border: 1px solid  #ccc;
+}
+
+
+.gridCuadrados{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cuadrado{
+    height: 100px;
+    aspect-ratio: 1/1;
+    background-color: aliceblue;
+    margin: 5px;
+}
+
+.verde {
+    background-color: lightgreen;
+}

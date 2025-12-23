@@ -56,6 +56,45 @@ let listaNodosVerde = document.querySelectorAll('.verde');
 ```
 Sin embargo, esto solo selecciona, lo que quieras hacerle a todos los elementos lo tienes que pasar por bucle For Of(encargado de pasar por todos los elementos de una lista)
 
+NOTA: Puedo usar estos métodos sobre cualquier tipo de nodo html que tenga en JavaScript. document es el Nodo del DOM, pero se puede acotar seleccionando un nodo previamente en JS. 
+
+```html
+
+    <div id="principal">
+        <h2>Viva JavaScript</h2>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+
+    <div class="gridCuadrados">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+
+    </div>
+
+```
+
+
+```js
+// Estamos buscando en document -> en el nodo principal que es la web
+const nodoPrincipal = document.querySelector('#principal')
+
+console.log(nodoPrincipal);
+console.log(nodoPrincipal.id);
+nodoPrincipal.style.color = 'red';
+
+
+// si sustituyo document por cualquier nodo html para hacer la búsqueda también se puede hacer. También se pueden combinar 
+const listaNodosCuadrados = nodoPrincipal.querySelectorAll('.cuadrado');
+console.log(listaNodosCuadrados)
+
+```
+
+En este ejemplo, nodoPrincipal coge todos los cuadrados que sean hijos del #principal. También se puede combinar selectores en el queryselector. 
 
 ## Pintar en la web
 
@@ -317,7 +356,7 @@ Esta es una función que independientemente las veces que se ejecute, siempre va
 
 ## MÉTODOS
 
-Cuando definimos un tipo de dato, vamos a tener herramientas (métodos):
+Cuando definimos un tipo de dato, vamos a tener un tipo de herramientas concreto (métodos):
 
 ### NUMBER
 
@@ -404,4 +443,6 @@ let pelicula = {
 console.log(pelicula.titulo)
 
 ```
+
+Los objetos no son conscientes de que los valores de las variables que tienen. Cuando nosotros creamos un objeto el concepto This, (como el self en python), es cuando se da cuenta de si mismo. 
 

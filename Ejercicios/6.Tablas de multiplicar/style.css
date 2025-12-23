@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+#generador {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+}
+
+#generador input{
+    margin: 25px;
+    width: 360px;
+    text-align: center;
+}
+
+#generador input::placeholder{
+    text-align: center;
+}
+
+.tablas > * {
+    border: 1px solid black;
+}
+
+.tablas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content:space-around;
+    margin: 50px auto;
+    width: fit-content;
+    
+}
+
+li {
+    list-style: none;
+    padding: 10px 25px;
+}
