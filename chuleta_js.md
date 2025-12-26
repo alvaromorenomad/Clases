@@ -166,6 +166,21 @@ function escribe_por_consola(){
 }
 ```
 
+### 2.  AddEventListener (RECOMENDADA)
+
+Este modelo es para crear muchos eventos en un elemento. El atributo onclick solo se puede utilizar una vez. 
+
+```js const nodoMiBoton = document.querySelector('#miBoton');
+
+//el primer parámetro del evento tiene que ser el nombre del evento, el segundo nombre del evento es una función que se tiene que ejecutar en ese punto (la función se puede poner de cualquieras de la manera que conocemos: normal creándola fuera, anónimas, arrow, etc)
+
+nodoMiBoton.addEventListener('click', function(){
+     // Aquí irían las instrucciones de ejecución
+
+});
+
+```
+
 ## Añadir y quitar clases
 
 ```js
@@ -182,6 +197,8 @@ function escribe_por_consola(){
 ```js
 //.style. puedo accer a cualquier propiedad de CSS
 cadaNodo.style.widht = anchoCuadrados + 'px';
+```
+
 
 
 ## For

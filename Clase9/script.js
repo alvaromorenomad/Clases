@@ -22,7 +22,7 @@ const persona2 = {
 }
 
 console.log(persona.nombre);
-persona2.saludo();
+
 
 const unaCopiaPersona = persona;
 
@@ -46,4 +46,20 @@ for (const cadaCuadrado of listaNodosCuadrados){
 
 const nodoMiBoton = document.querySelector('#miBoton');
 
-nodoMiBoton.addEventListener('click', function(){})
+//el primer parámetro del evento tiene que ser el nombre del evento, el segundo nombre del evento es una función que se tiene que ejecutar en ese punto (la función se puede poner de cualquieras de la manera que conocemos: normal creándola fuera, anónimas, arrow, etc). No hace falta que tenga réplica en el html. 
+
+//nodoMiBoton.addEventListener('click', function(){
+//
+//   alert('Se ha clicado');
+//
+//}
+//);
+
+const lista_nodos_cuadrados = document.querySelectorAll ('.cuadrado');
+
+for (const cadaCuadrado of lista_nodos_cuadrados){
+    cadaCuadrado.addEventListener( 'click', function(){
+        console.log ("click")
+        cadaCuadrado.classList.toggle( 'rojo' ) //en vez de cadaCuadrado, al estar en su ámbito, se puede utilizar this. 
+    })
+}
