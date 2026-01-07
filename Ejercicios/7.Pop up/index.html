@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+
+    <button  onclick="AbrirPopUp()" id="botonPopup">Abrir</button>
+
+    <div id="pop-up" class="oculto">
+        
+        <div class="titulo">
+            <h4>Modal title</h4>
+        
+            <a onclick="CerrarPopUp()" href="#"><img src="cruzar.png" alt="icono de cerrar"></a>
+
+        </div>    
+        
+        <hr>
+
+        <p>Wohoo, you're reading this in a text modal</p>
+
+        <hr>
+
+        <button onclick="CerrarPopUp()">Close</button>
+
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
