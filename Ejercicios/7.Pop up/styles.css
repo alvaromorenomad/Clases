@@ -12,20 +12,37 @@ body {
 }
 
 #pop-up {
-    background-color: white;
     display: flex;
     flex-direction: column;
-    transform: translate(-50%, -50%);
     justify-content: center;
-    border: 1px solid black;
+    align-items: center;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.205);
     padding: 10px;
     border-radius: 5px;
     z-index: 1000;
     position: fixed;
-    top: 15%;
-    left: 50%;
-    width: 420px;
-    max-width: 90%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*El pop up tiene que plantearse como una página entera, diviendo la parte de la página total y el card para seleccionarlo aportando transparencia al background color del popup */
+
+.card {
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 10%;
+    left: center;
+    
+}
+
+.card button {
+    align-self: self-end;
 }
 
 .titulo  {
