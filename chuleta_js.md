@@ -143,7 +143,7 @@ const nodoGridAlumnos = document.querySelector('#gridAlumnos');
 nodoGridAlumnos.innerHTML = str_html_alumnos;
 ```
 
-NOTA 2: Usar Template String. 
+NOTA 2: Usar Template String. Siempre tiene que estar completo a la hora de pintar.
 ```js
 ${ variable } 
 
