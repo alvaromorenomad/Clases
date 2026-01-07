@@ -30,5 +30,6 @@ h1 {
 }
 
 .oculto {
-        visibility: hidden;
+    display: none; /*esto hace que al escoderse las imágenes, se reordene con el flujo normal*/
+    visibility: hidden;
 }
