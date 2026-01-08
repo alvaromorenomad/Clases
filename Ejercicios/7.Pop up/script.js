@@ -26,3 +26,5 @@ nodoCruz.addEventListener ('click', ()=> {
 //    const nodoPopUp = document.querySelector('#pop-up');
 //    nodoPopUp.classList.add('oculto');
 //}
+
+// 

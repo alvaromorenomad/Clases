@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+#gridAlumnos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.alumno {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 3px;
+    border-radius: 2px;
+    animation: aparecer 0.5s;
+}
+
+.verde{
+    background-color: lightgreen;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

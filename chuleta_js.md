@@ -33,6 +33,33 @@ JS -> Programar
 |FALSE|  TRUE  | TRUE  
 |FALSE|  FALSE  |  FALSE
 
+## Ejecutar funciones después de la ejecución. 
+
+Para ejecutar funciones después de la ejecución de la DOM y del JS, a nuestro antojo, se puede hacer a través del setTimeout y del setInterval. 
+
+### setTimeout
+
+Gracias a esta operación, un código se va a ejecutar un tiempo personalizado después de la ejecución o de dar la orden. 
+
+```js
+
+setTimeout (function(){
+    nodoPopUp.classList.remove('activo')
+} , 1000)
+
+```
+
+### setInterval
+
+Con esta operación, un código se va a repetir cada X tiempo que nosotros decidamos.
+
+```js
+setInterval(function() {
+ console.log("hola");
+ }, 1000);
+
+```
+En el ejemplo anterior, cada 1 segundo se escribirá "hola" en la consola. 
 
 ## Seleccionar NODOS HTML
 ### 1. Usar un identificador

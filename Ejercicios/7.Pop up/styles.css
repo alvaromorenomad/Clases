@@ -26,6 +26,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    
 }
 
 /*El pop up tiene que plantearse como una página entera, diviendo la parte de la página total y el card para seleccionarlo aportando transparencia al background color del popup */
@@ -38,6 +39,8 @@ body {
     position: fixed;
     top: 10%;
     left: center;
+    /*animation-name: abrirPopUp;
+    animation-duration: 1s;*/
     
 }
 
@@ -79,3 +82,13 @@ hr {
     visibility: hidden;
 }
 
+@keyframes abrirPopUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*keyframe se utiliza para hacer una especie de función para aplicar transiciones personalizadas a distintas propiedades que sean númericas*/
