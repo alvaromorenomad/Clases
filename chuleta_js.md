@@ -128,7 +128,6 @@ En este ejemplo, nodoPrincipal coge todos los cuadrados que sean hijos del #prin
 Primero seleccionar un nodo
 
 
-
 1. Cuando solo hay elemento seleccionado a la vez Queryselector.
 ```js
 
@@ -176,6 +175,42 @@ ${ variable }
 
 ```
 
+## Pintar en la web creando elementos
+
+A parte de innerHTML, hay otra forma de pintar en la web, es mediante a la creación de elementos HTML. Esta opción en la recomendada ya que no sobreescribe constantemente el archivo HTML, si no que va creando elementos puros cuando se disparan. 
+
+Para hacer esto, se utiliza una combinación entre createElement y appendChild. 
+
+```js
+
+function pintarAlumnoAppend(nombreAlumno){
+    //crear elementos nuevos
+
+    const nodoAlumno = document.createElement('div');
+    
+    nodoAlumno.classList.add('alumno');
+
+    const nodoH2 = document.createElement('h2'); 
+    nodoH2.innerHTML = nombreAlumno
+
+    const nodoBoton = document.createElement('button');
+    nodoBoton.innerHTML = 'Seleccionar';
+
+    nodoBoton.addEventListener('click',function(){
+        nodoBoton.classList.add('verde')
+    })
+
+    nodoAlumno.appendChild(nodoH2);
+    nodoAlumno.appendChild(nodoBoton);
+
+    //pintado
+
+    const nodoGridAlumnos = document.querySelector('#gridAlumnos');
+    nodoGridAlumnos.appendChild(nodoAlumno);
+}
+
+
+```
 
 ## Eventos
 
