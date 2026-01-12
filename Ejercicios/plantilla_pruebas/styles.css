@@ -59,3 +59,77 @@ h1 {
     font-weight: bold;
     background-color: white;
 }
+
+.numeroPar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 15px;
+    background-color: rgba(211, 211, 211, 0.507);
+}
+
+.numeroPar button {
+    margin-top: 10px;
+}
+
+.numeroPar input {
+    margin: 5px;
+}
+
+#contenedorNumeroPar p {
+    border: 1px solid black;
+    justify-self: center;
+    padding: 40px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.verde {
+    background-color: lightgreen;
+}
+
+.azul {
+    background-color: lightblue;
+}
+
+.amarillo {
+    background-color: lightgoldenrodyellow;
+}
+
+.rojo {
+    background-color: lightcoral;
+}
+
+.sumaImpar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 15px;
+    background-color: rgba(211, 211, 211, 0.507);
+}
+
+.sumaImpar input {
+    margin: 5px;
+    width: 26ch;
+}
+
+.sumaImpar button {
+    margin-top: 10px;
+}
+
+#contenedorSuma h3{
+    border: 1px solid black;
+    font-size: large;
+    font-weight: bold;
+    justify-self: center;
+    padding: 40px;
+    font-size: large;
+    font-weight: bold;
+    background-color: white;
+}
