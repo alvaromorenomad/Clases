@@ -133,3 +133,79 @@ h1 {
     font-weight: bold;
     background-color: white;
 }
+
+.circulos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 15px;
+    background-color: rgba(211, 211, 211, 0.507);
+}
+
+.circulos input{
+    margin: 5px;
+    width: 26ch;
+}
+
+.circulos button {
+    margin-top: 10px;
+}
+
+.resultadosCirculo {
+    border: 1px solid black;
+    font-size: large;
+    font-weight: bold;
+    justify-self: center;
+    padding: 20px;
+    font-size: large;
+    font-weight: bold;
+    background-color: white;
+    margin-top: 15px;
+}
+
+.tablasMul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 15px;
+    background-color: rgba(211, 211, 211, 0.507);
+}
+
+.tablasMul input {
+    margin: 5px;
+    width: 29ch;
+}
+
+.tablasMul button {
+    margin-top: 10px;
+}
+
+.tabla {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.cadaTabla {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadaTabla h3 {
+    margin: 0;
+    padding: 5px;
+}
+
+

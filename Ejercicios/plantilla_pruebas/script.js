@@ -134,3 +134,103 @@ function sumaImpares (){
 }
 
 nodoBtnSuma.addEventListener('click', sumaImpares);
+
+const nodoBtnCirculo = document.querySelector('#calcularCirculo');
+
+const PI = 3.1416;
+
+function diamentroCirculo (radio){
+    const diametro = 2 * radio;
+    console.log(diametro);
+    return diametro;
+}
+
+function perimetroCirculo (radio){
+    const perimetro = 2 * PI * radio;
+    console.log(perimetro)
+    return perimetro;
+}
+
+function areaCirculo (radio){
+    const area = PI * radio * radio;
+    console.log(area);
+    return area;
+}
+
+function calcularCirculo (){
+    const inputRadio = document.querySelector('#inputRadio');
+    const radio = inputRadio.valueAsNumber;
+
+    if (isNaN(radio)){
+        const nodoContenedorCirculo = document.querySelector('#contenedorCirculo');
+        nodoContenedorCirculo.innerHTML = `<div class='resultadosCirculo'>
+                                                El número introducido no es válido
+                                            </div>
+        `
+    }else{
+
+        const nodoCirculoPrint = document.createElement('div');
+        nodoCirculoPrint.classList.add('resultadosCirculo');
+
+        const diametro = diamentroCirculo(radio);
+
+        const nodoDiametroPrint = document.createElement('h3');
+        nodoDiametroPrint.innerText = `El diámetro del círculo es ${diametro}`;
+        nodoCirculoPrint.appendChild(nodoDiametroPrint);
+
+        const perimetro = perimetroCirculo(radio);
+
+        const nodoPerimetroPrint = document.createElement('h3');
+        nodoPerimetroPrint.innerText = `El perímetro del círculo es ${perimetro}`;
+        nodoCirculoPrint.appendChild(nodoPerimetroPrint);
+
+        const area = areaCirculo(radio);
+
+        const nodoAreaPrint = document.createElement('h3');
+        nodoAreaPrint.innerText = `El área del círculo es ${area}`;
+        nodoCirculoPrint.appendChild(nodoAreaPrint);
+
+        const nodoContenedorCirculo = document.querySelector('#contenedorCirculo');
+        nodoContenedorCirculo.innerHTML = ''; //esto se añade antes de la impresión final para que cada vez que se clique el botón no se acumulen los resultados. 
+        nodoContenedorCirculo.appendChild (nodoCirculoPrint);
+        }
+
+}
+
+nodoBtnCirculo.addEventListener('click', calcularCirculo);
+
+const btnCalcularTablas = document.querySelector('#calcularTabla');
+
+function generarTablas (){
+    const nodoInputValue = document.querySelector('#inputMultiplicar');
+    const valorTablas = nodoInputValue.valueAsNumber;
+
+    const nodoGenerarTabla = document.querySelector('#contenedorTablas');
+
+    nodoGenerarTabla.classList.add('tabla');
+    nodoGenerarTabla.innerHTML = '';
+
+    for(let multiplicador = 0; multiplicador <= valorTablas; multiplicador++){
+
+        nodoGenerarTabla.innerHTML += crearTabla(multiplicador);
+    }
+    
+}
+
+function crearTabla (multiplicador){
+    let str_tabla = `<div class=cadaTabla><h2>Tabla del ${multiplicador}</h2>`;
+
+    for (let tabla = 0; tabla <= 10; tabla++){
+        str_tabla += `<h3>${multiplicador} X ${tabla} = ${(multiplicador * tabla)}</h3>
+        `
+    }
+
+    str_tabla += `</div>`;
+    return str_tabla;
+}
+
+btnCalcularTablas.addEventListener('click', generarTablas);
+
+
+
+
