@@ -52,6 +52,34 @@ nodoBotonFuego.addEventListener('click', function(){
     }
 });
 
+const listaTodasImg = document.querySelectorAll('.imagen img');
+
+
+for (let cadaImagen of listaTodasImg){
+    cadaImagen.addEventListener('click', function( evento ) {
+        let src_clicado = cadaImagen.src;
+
+        //const nodoModal = document.querySelector('#modal')
+
+        modal.style.display = 'flex';
+        
+        let nodoImgModal = document.querySelector('#modal img');
+
+        nodoImgModal.src = src_clicado;
+
+    })
+}
+
+// otra forma de optimizarlo sería: 
+
+// for( let cadaImagen of listaImagenes){
+// if (cadaImagen.classlist.contains('tierra)){
+//    cadaImagen.classList.add('activo')
+//}else{
+//    cadaImagen.classList.remove('activo')
+//}
+//
+//
 
 //function mostrarFuego (){
 //    for (const noFuego of nodoFuego) {

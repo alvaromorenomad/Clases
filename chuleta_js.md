@@ -175,7 +175,7 @@ ${ variable }
 
 ```
 
-## Pintar en la web creando elementos
+## Pintar en la web creando elementos // Crear nodos HTML con JS: CreateElement y appendchild
 
 A parte de innerHTML, hay otra forma de pintar en la web, es mediante a la creación de elementos HTML. Esta opción en la recomendada ya que no sobreescribe constantemente el archivo HTML, si no que va creando elementos puros cuando se disparan. 
 

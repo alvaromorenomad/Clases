@@ -231,6 +231,73 @@ function crearTabla (multiplicador){
 
 btnCalcularTablas.addEventListener('click', generarTablas);
 
+const nodoBtnPop = document.getElementById('bntPop');
 
+function activarPopUp (){
+    const nodoPopUpActivo = document.getElementById('popUpactivo');
+    nodoPopUpActivo.style.display = 'block';
+    
+}
 
+nodoBtnPop.addEventListener('click',activarPopUp);
 
+function cerrarPopUp (){
+    const nodoPopUpActivo = document.getElementById('popUpactivo');
+        nodoPopUpActivo.style.display = 'none';
+
+}
+
+const nodoBtnPopCerrar = document.querySelector('#btnPopCerrar');
+
+nodoBtnPopCerrar.addEventListener('click', cerrarPopUp);
+
+const nodoBtnTodos = document.querySelector ('#btnTodos'); 
+const nodoBtnTierra = document.querySelector ('#btnTierra');
+const nodoBtnAgua = document.querySelector ('#btnAgua');
+const nodoBtnFuego  = document.querySelector ('#btnFuego');
+
+function aplicarOculto (clase){
+
+    const listaTodasImg = document.querySelectorAll('.imagen');
+    
+    for (let cadaImagen of listaTodasImg){
+        if(cadaImagen.classList.contains(clase)){
+            cadaImagen.classList.remove('oculto');
+        }else{
+            cadaImagen.classList.add('oculto');
+        }
+    }
+
+     
+}
+
+nodoBtnAgua.addEventListener('click', () => aplicarOculto('agua'));
+nodoBtnTierra.addEventListener('click', () => aplicarOculto ('tierra'));
+nodoBtnFuego.addEventListener('click', () => aplicarOculto('fuego'));
+nodoBtnTodos.addEventListener('click', function(){
+    const listaTodasImg = document.querySelectorAll('.imagen');
+    for (let cadaImagen of listaTodasImg){
+        cadaImagen.classList.remove('oculto');
+    }
+});
+
+// las arrow function son una forma de utilizar cuando clicas una función con parámetro definido.
+
+const listaSrcImagenes = document.querySelectorAll('.imagen img');
+console.log(listaSrcImagenes);
+
+for (let cadaSrc of listaSrcImagenes){
+    cadaSrc.addEventListener('click', function(){
+        const nodoModalSrc = document.querySelector('.modalFotos');
+        nodoModalSrc.classList.remove('oculto');
+        const nodoImagenModal = document.querySelector('.modalFotos img');
+        console.log(nodoImagenModal.src);
+        nodoImagenModal.src = cadaSrc.src;
+    });
+}
+
+const nodoModalFotos = document.querySelector('.modalFotos');
+
+nodoModalFotos.addEventListener('click', function(){
+    nodoModalFotos.classList.add('oculto');
+})

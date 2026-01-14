@@ -33,3 +33,19 @@ h1 {
     display: none; /*esto hace que al escoderse las imágenes, se reordene con el flujo normal*/
     visibility: hidden;
 }
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(211, 211, 211, 0.308);
+
+}
+
+#modal img {
+    
+}
+
