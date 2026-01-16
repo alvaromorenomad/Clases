@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    height: 100px;
+}
+
+header img{
+    padding: 30px;
+}
+
+.carrito {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 2%;
+}
+
+.productos {
+    border: 1px solid black;
+    background-color: #ccc;
+    width: 60%;
+}
+
+.factura {
+    border: 1px solid black;
+    background-color: #ccc;
+    width: 30%;
+}
