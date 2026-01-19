@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    
+    background-color: #fcffff;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.allCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.variation, .lessons, .workshops {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 50px;
+    
+}
+
+img {
+    padding-bottom: 25px;
+}
+
+p {
+   margin: 0px;
+}
+
+
