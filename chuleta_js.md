@@ -525,3 +525,91 @@ console.log(pelicula.titulo)
 
 Los objetos no son conscientes de que los valores de las variables que tienen. Cuando nosotros creamos un objeto el concepto This, (como el self en python), es cuando se da cuenta de si mismo. 
 
+## CLASES
+
+Las clases son plantillas o prototipos. Las variables de las clases se tienen que comenzar con Mayúscula. Las clases son representaciones de las ideas que podemos utilizar para crear objetos del mundo cotidiano. En realidad, una clase es un constructor de objetos. En la plantilla para crear objetos sin miedo a que cometamos typos. 
+
+```js
+
+class Pelicula{
+    constructor (titulo, director, fecha){
+        this.titulo = titulo;
+        this.director = director;
+        this.fecha = fecha;
+    }
+
+```
+Dentro del constructor van todos los elementos que luego serán llamados atributos. Se tienen que definir los atributos del objeto con this.attr = attr para que la clase sepa que tiene que utilizar para si misma los atributos que se dan. Es como linkar el parámetro del constructor a la instancia. Hay que hacer esto siempre que queramos que los atributos se vean fuera del objeto, pero podríamos no querer hacer esto. This va a ser el contexto que vaya a tener el objeto. 
+
+Los atributos no tienen porque ser directos, también se pueden hacer condicionales y predefinirlos según otro atributo. Lo siguiente define un atributo condicional que depende de la información anterior para dar un valor u otro. No va por parámetro porque es condicional. 
+
+```js
+
+class Pelicula{
+    constructor (titulo, director, fecha){
+        this.titulo = titulo;
+        this.director = director;
+        this.fecha = fecha;
+        
+        if (this.year < 1980){
+            this.color = "B/N"
+        }else{
+            this.color = "Color"
+        }
+    }
+```
+
+También se pueden crear instancias vacías y decidir que no entren por parámetro. 
+
+```js
+
+this.reparto = [];
+
+```
+
+Fuera del construstor y dentro de la clase van los métodos. Los métodos son funciones que utilizan los valores de los atributos de la clase para dar resultados. 
+
+```js
+getAnosCartelera(){
+        const hoy = new Date();
+        const year = hoy.getFullYear();
+
+        return year - this.fecha;//Ahora todos los objetos de las clases pueden usar este método. La definición de la función es como la anterior, no como en el objeto. 
+    }
+```
+
+Con la clase creada, ahora se pueden crear instancias del objeto (objetos individuales)
+
+```js
+
+const pelicula_1 = new Pelicula('Toy Story', 'Pixar', 1990);
+
+
+```
+
+Volviendo a la lista vacía, con un método podemos añadir actores al reparto. Supongo que si lo hicieramos por parámetro en el constructor, no haría falta esto pero habría que rellenarlo. 
+
+```js
+
+addActor( actor ){
+
+        this.reparto.push (actor); 
+}
+
+```
+
+Imaginemos que para los actores, necesitamos crear un subobjeto. tiene propiedades y de igual manera se podría parametrizar una clase hija para no tener que crear por parámetro o método todo esto. 
+
+```js
+
+class Actor{
+    constructor( nombre, apellidos, fechaNacimiento, retirado) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+        this.retirado = retirado;
+    }
+}
+
+
+```
