@@ -431,6 +431,17 @@ const otroSaludo = (nombre, apellido) => {
 
 Esta es una función que independientemente las veces que se ejecute, siempre va a dar el mismo resultado. 
 
+## IF Abreviado 
+
+```js
+let nombre = 'manu'
+
+let texto_1= ( condicion ) ? 'Lo que ocurre cuando se cumple' : 'Cuando no se cumple'; //Esto es un ejemplo sintactico. 
+
+let texto = (  nombre === 'manu') ? console.log('OK') : console.log  ('NOK');
+
+```
+
 
 
 ## MÉTODOS
@@ -551,7 +562,7 @@ class Pelicula{
         this.director = director;
         this.fecha = fecha;
         
-        if (this.year < 1980){
+        if (this.fecha < 1980){
             this.color = "B/N"
         }else{
             this.color = "Color"
