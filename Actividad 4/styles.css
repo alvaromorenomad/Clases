@@ -1,37 +1,109 @@
 * {
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-body {
+/*escribir una variable para el color de las lineas*/
+
+header {
+    padding: 30px;
+    border-bottom: 1px solid #E9E9EB;
+}
+
+.fichaProductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 45px;
+    width: 100%;
+    gap: 2%;
+}
+
+/*Añadir minwidth para el wrap*/
+
+.carrito {  
+    
+    padding: 30px 150px;
+    width: 30%;
+    padding: 25px 30px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FAFAFA;
+    flex-wrap: wrap;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr;
+    width: 68%;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}    
+
+.titulos, .ifhone, .cargador, .fundaPiel {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    padding: 25px 15px;
+    align-items: center;
+}
+
+.caja {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.productosIndividual h3 {
     margin: 0;
 }
 
-header {
-    border-bottom: 1px solid #ccc;
-    height: 100px;
+.productosIndividual h3:last-child{
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 10px 0px;
+}    
+
+.titulos {
+    border-bottom: 1px solid #E9E9EB;
 }
 
-header img{
-    padding: 30px;
-}
-
-.carrito {
+.cajaCantidad {
+    border: 1px solid #E9E9EB;
+    min-width: 16px;
+    min-height: 16px;
+    padding: 20px;
+    border-radius: 20%;
+    aspect-ratio: 1 / 1;
     display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 2%;
+    align-items: center;
+
 }
 
-.productos {
-    border: 1px solid black;
-    background-color: #ccc;
-    width: 60%;
+.caja span {
+    padding: 15px;
+    font-weight: bold;
 }
 
-.factura {
-    border: 1px solid black;
-    background-color: #ccc;
-    width: 30%;
+.precio span {
+    font-weight: bold;
+}
+
+.totalProducto {
+    font-weight: bold;
+}
+
+h1 {
+    border-bottom: 1px solid #E7E7E9;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.carrito h2 {
+    font-weight: normal;
+    font-size: 1em;
 }
