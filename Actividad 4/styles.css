@@ -87,6 +87,7 @@ header {
 .caja span {
     padding: 15px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .precio span {
