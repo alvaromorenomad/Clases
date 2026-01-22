@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 150px;
+}
+
+.card img {
+    width: 100%;
+}
