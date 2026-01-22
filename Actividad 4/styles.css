@@ -3,11 +3,13 @@
     font-family: "Inter", sans-serif;
 }
 
-/*escribir una variable para el color de las lineas*/
+:root {
+    --color-lineas: #87878d;
+}
 
 header {
     padding: 30px;
-    border-bottom: 1px solid #E9E9EB;
+    border-bottom: 1px solid var(--color-lineas); 
 }
 
 .fichaProductos {
@@ -19,14 +21,11 @@ header {
     padding: 45px;
     width: 100%;
     gap: 2%;
+    min-width: 900px;
 }
 
-/*Añadir minwidth para el wrap*/
 
 .carrito {  
-    
-    padding: 30px 150px;
-    width: 30%;
     padding: 25px 30px;
     width: 30%;
     display: flex;
@@ -34,6 +33,7 @@ header {
     align-items: flex-start;
     background-color: #FAFAFA;
     flex-wrap: wrap;
+    min-width: 430px;
 }
 
 .catalogo {
@@ -42,7 +42,7 @@ header {
     width: 68%;
     justify-content: stretch;
     align-items: flex-start;
-    flex-wrap: wrap;
+    
 }    
 
 .titulos, .ifhone, .cargador, .fundaPiel {
@@ -69,11 +69,11 @@ header {
 }    
 
 .titulos {
-    border-bottom: 1px solid #E9E9EB;
+    border-bottom: 1px solid var(--color-lineas);
 }
 
 .cajaCantidad {
-    border: 1px solid #E9E9EB;
+    border: 1px solid var(--color-lineas);
     min-width: 16px;
     min-height: 16px;
     padding: 20px;
@@ -98,7 +98,7 @@ header {
 }
 
 h1 {
-    border-bottom: 1px solid #E7E7E9;
+    border-bottom: 1px solid var(--color-lineas);
     width: 100%;
     padding: 20px 0px;
 }
