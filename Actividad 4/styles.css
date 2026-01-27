@@ -62,6 +62,10 @@ header {
     margin: 0;
 }
 
+.btnMenos, .btnMas {
+    text-decoration: none;
+}
+
 .productosIndividual h3:last-child{
     font-weight: normal;
     font-size: 0.8em;
@@ -72,7 +76,7 @@ header {
     border-bottom: 1px solid var(--color-lineas);
 }
 
-.cajaCantidad {
+.numeroCantidad {
     border: 1px solid var(--color-lineas);
     min-width: 16px;
     min-height: 16px;

@@ -65,8 +65,8 @@ fetch(URL_API).then(( peticion /**Variable donde se van a recibir los datos */ )
 })
 
 function pintaLista(lista){
-    for (let cadaPersonaje of lista){
-        pintaPersonaje(cadaPersonaje);
+    for (let Personaje of lista){
+        pintaPersonaje(Personaje);
     }
 }
 

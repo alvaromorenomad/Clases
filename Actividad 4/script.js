@@ -2,7 +2,7 @@
 
 
 
-function crearContenedor(nodoSalida){
+/* function crearContenedor(nodoSalida){
     let contador = 0;
 
     return function () {
@@ -53,4 +53,6 @@ const restarFunda = disminuirContenedor(nodoNumeroCantidad3);
 nodoBtbMenosIfhone.addEventListener('click', restarIphone);
 nodoBtnMenosCargador.addEventListener('click', restarCargador);
 nodoBtnMenosFunda.addEventListener('click', restarFunda);
+
+ */
 
