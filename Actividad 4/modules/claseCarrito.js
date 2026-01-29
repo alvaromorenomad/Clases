@@ -1,17 +1,16 @@
 'use strict' 
 
 export class Carrito{
-    constructor(producto){
-        this.title = producto.title;
-        this.price = producto.price;
-        this.sku = producto.SKU;
+    constructor(listaProductos){
+        this.listaProductos = listaProductos;
     }
 
-    actualizarUnidades(sku, unidades){
-        this.sku = sku;
-        this.unidades = unidades;
-        return sku * unidades;
-        // Actualiza el número de unidades que se quieren comprar de un producto
+    actualizarUnidades(listaProductos){
+        this.listaProductos.forEach((producto) => {
+            let unidadActualizada = producto.sku * producto.unidades;
+            return unidadActualizada;
+        })
+        
   
     }
 
