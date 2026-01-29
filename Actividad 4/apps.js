@@ -28,6 +28,9 @@ fetch(URL_API).then((respuesta) => {
         listaProductos.forEach((producto) => {
             const nodoProducto = pintaProducto(producto);
             crearContador(nodoProducto,producto);
+            //let unidadesActuales = producto.actualizarUnidades();
+            //console.log(unidadesActuales)
+
             })
 
         console.log(listaProductos[0].unidades);
@@ -92,7 +95,7 @@ function pintaProducto (producto){
     nodoDivTotalPrecio.classList.add('totalProducto');
 
     const nodoSpanTotalPrecio = document.createElement('span');
-    nodoSpanTotalPrecio.innerText = `${(producto.getTotal()).toFixed(2)}${producto.currency}`;
+    nodoSpanTotalPrecio.innerText = `0${producto.currency}`;
 
     nodoDivTotalPrecio.appendChild(nodoSpanTotalPrecio);
 
@@ -107,6 +110,10 @@ function pintaProducto (producto){
     nodoCatalogo.appendChild(nodoDivPrincipal);
 
     return nodoDivPrincipal;
+}
+
+function pintarCarrito (producto){
+    
 }
 
 

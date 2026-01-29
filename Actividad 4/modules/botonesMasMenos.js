@@ -12,14 +12,16 @@ export function crearContador(contenedor, producto) {
   btnMas.addEventListener("click", () => {
     producto.unidades++;
     valor.textContent = producto.unidades;
-    nodoTotal.textContent = `${(producto.getTotal()).toFixed(2)}${producto.currency}`;  
+    //let unidadesActuales = producto.actualizarUnidades();
+    //console.log(unidadesActuales)
+    nodoTotal.textContent = `${(producto.getSubtotal()).toFixed(2)}${producto.currency}`;  
     });
 
   btnMenos.addEventListener("click", () => {
     if( producto.unidades > 0){
         producto.unidades--;
         valor.textContent = producto.unidades;
-        nodoTotal.textContent = (`${(producto.getTotal()).toFixed(2)}${producto.currency}`);
+        nodoTotal.textContent = (`${(producto.getSubtotal()).toFixed(2)}${producto.currency}`);
         }
   });
 }

@@ -9,10 +9,29 @@ export class Producto {
         this.currency = '€';
     }
 
-    getTotal(){
+    getSubtotal(){
         return this.precio * this.unidades;
     }
 
+    actualizarUnidades(){
+        let unidadesActilizadas = '';
+        unidadesActilizadas = `${this.sku} =  ${this.unidades}`;   
+        return unidadesActilizadas;
+    }
+
+    obtenerInformacionProducto(){
+        let informacionProducto = this.titulo;
+        return informacionProducto;
+    }
+
+    getTotal(){
+        let precioTotal = 0
+        this.getSubtotal
+    }
+
+
+
+    
     
 
 
