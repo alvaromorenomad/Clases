@@ -8,6 +8,8 @@ import { crearContador } from "./modules/botonesMasMenos.js";
 
 import { Producto } from "./modules/claseProducto.js";
 
+import { Carrito } from "./modules/claseCarrito.js";
+ 
 const URL_API = 'https://api.npoint.io/2ba130d5ba2c58c7b93f';
 
 fetch(URL_API).then((respuesta) => {
@@ -27,12 +29,13 @@ fetch(URL_API).then((respuesta) => {
         
         listaProductos.forEach((producto) => {
             const nodoProducto = pintaProducto(producto);
-            crearContador(nodoProducto,producto);
+            crearContador(nodoProducto,producto,listaProductos);
             //let unidadesActuales = producto.actualizarUnidades();
             //console.log(unidadesActuales)
-
             })
 
+        
+        
         console.log(listaProductos[0].unidades);
         window.listaProductos = listaProductos; 
         })
@@ -112,9 +115,7 @@ function pintaProducto (producto){
     return nodoDivPrincipal;
 }
 
-function pintarCarrito (producto){
-    
-}
+
 
 
     

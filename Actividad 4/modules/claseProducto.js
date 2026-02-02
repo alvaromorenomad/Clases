@@ -28,14 +28,6 @@ export class Producto {
         let precioTotal = 0
         this.getSubtotal
     }
-
-
-
-    
-    
-
-
-    //crear un método aqui para poder sacar la información de los productos y pintarlo
 }
 
 
