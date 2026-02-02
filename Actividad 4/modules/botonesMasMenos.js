@@ -43,6 +43,8 @@ export function crearContador(contenedor, producto, lista) {
 
         nodoLineaTituloSubtotal.textContent = `${producto.titulo}`
         nodoLineaCantidadSubtotal.textContent = `${(producto.getSubtotal()).toFixed(2)}${producto.currency}`
+
+        allTotal(lista, producto.currency);
         
         if(producto.unidades === 0){
           nodoDivSubtotal.remove();
@@ -60,6 +62,8 @@ function allTotal(listaProductos, currency){
 
     const nodoTotalConjunto = document.querySelector('#totalConjunto');
     nodoTotalConjunto.innerHTML = `<p>${acumuladorTotal.toFixed(2)}${currency}</p>`;
+
+    
     
 }
 
