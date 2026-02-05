@@ -9,7 +9,7 @@ export function crearContador(contenedor, producto, lista) {
 
   //construcción del elemento lineasSubtotal una vez fuera y luego en el click se rellena; Si en el click solo relleno, se crea el espacio del html antes del click. 
   
-  const nodoCarritoSubtotal = document.querySelector('#carritoSubtotal')
+  const nodoCarritoSubtotal = document.querySelector('#carritoSubtotal');
 
   const nodoDivSubtotal = document.createElement('div');
         
@@ -17,7 +17,7 @@ export function crearContador(contenedor, producto, lista) {
   const nodoLineaCantidadSubtotal = document.createElement('p')
 
   btnMas.addEventListener("click", () => {
-    producto.unidades++;
+    nodoCarritoSubtotal.actualizarUnidades();
     valor.textContent = producto.unidades;
     
     nodoTotal.textContent = `${(producto.getSubtotal()).toFixed(2)}${producto.currency}`;  
@@ -63,8 +63,6 @@ function allTotal(listaProductos, currency){
     const nodoTotalConjunto = document.querySelector('#totalConjunto');
     nodoTotalConjunto.innerHTML = `<p>${acumuladorTotal.toFixed(2)}${currency}</p>`;
 
-    
-    
 }
 
 

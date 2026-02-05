@@ -1,36 +1,56 @@
 'use strict' 
 
 export class Carrito{
-    constructor(producto){
-        this.producto = producto;
+    constructor(){
+        this.productos = [];
     }
 
-    
-
-}
-
-
-
-/*     actualizarUnidades(producto){
-        const unidades = producto.unidades;
-  
+    agregarProducto(producto){
+        this.productos.push(producto);
+        producto.unidades = 1;
     }
 
-    obtenerInformaciónProducto(sku){
-        this.sku = sku;
-        // Devuelve los datos de un producto además de las unidades seleccionadas
+    actualizarUnidades(producto){
+        producto.unidades++;
+    }
 
+    restarUnidades(producto){
+        if(producto.unidades > 0){
+           producto.unidades--; 
+        }
+    }
+
+    obtenerInformacionProducto(producto){
+        let sumaSubtotal = producto.precio * producto.unidades;
+
+        return {
+            titulo: producto.titulo,
+            sku: producto.sku,
+            unidades: producto.unidades,
+            totalProducto: (sumaSubtotal).toFixed(2),
+            moneda: producto.currency
+        }
+        
     }
 
     obtenerCarrito(){
-        // Devuelve información de los productos añadidos al carrito
+        let carritoFinal = this.productos;
 
+        let  sumaTotal = 0;
+        
+        carritoFinal.forEach((producto) => {
+            let sumaSubtotal = producto.precio * producto.unidades; 
+            sumaTotal += sumaSubtotal;
+        })
+
+        return {
+            carritoTotal: carritoFinal,
+            total: sumaTotal,
+            moneda: carritoFinal[0].currency
+        }
     }
 
-    agregarProducto(producto, unidades = 1) {
 
-    }
-    
 }
 
- */
+
