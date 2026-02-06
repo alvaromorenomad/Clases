@@ -97,38 +97,39 @@ export function pintadoInformacionProducto (producto, instanciaCarrito, contened
     </div>` */
 }
 
-export function pintadoInformacionProductoCarrito (producto,instanciaCarrito){
+export function pintadoInformacionProductoCarrito (instanciaCarrito){
 
-    const extracion = instanciaCarrito.obtenerInformacionProducto(producto);
+    const nodoCarritoSubtotal = document.querySelector('#carritoSubtotal');
 
-    const nodoCarritoSubtotal = contendor.querySelector('#carritoSubtotal');
+    nodoCarritoSubtotal.innerHTML = '';
 
-    const nodoDivSubtotal = document.createElement('div');
-    const nodoLineaTituloSubtotal = document.createElement('p');
-    const nodoLineaCantidadSubtotal = document.createElement('p');
-    nodoDivSubtotal.appendChild(nodoLineaTituloSubtotal);
-    nodoDivSubtotal.appendChild(nodoLineaCantidadSubtotal);
-      
-    nodoCarritoSubtotal.appendChild(nodoDivSubtotal);
+    instanciaCarrito.productos.forEach(producto => {
+        if(producto.unidades > 0){
 
-    nodoLineaTituloSubtotal.textContent = `${extracion.titulo}`
-    nodoLineaCantidadSubtotal.textContent = `${extracion.totalProducto}${extracion.moneda}`;
+            const extracion = instanciaCarrito.obtenerInformacionProducto(producto);
+
+            const nodoDivSubtotal = document.createElement('div');
+            const nodoLineaTituloSubtotal = document.createElement('p');
+            const nodoLineaCantidadSubtotal = document.createElement('p');
+
+            nodoLineaTituloSubtotal.textContent = `${extracion.titulo}`
+            nodoLineaCantidadSubtotal.textContent = `${extracion.totalProducto}${extracion.moneda}`;
+
+            nodoDivSubtotal.appendChild(nodoLineaTituloSubtotal);
+            nodoDivSubtotal.appendChild(nodoLineaCantidadSubtotal);
+
+            nodoCarritoSubtotal.appendChild(nodoDivSubtotal);
+        }
+    });
 
     if (extracion.unidades <= 0){
         nodoCarritoSubtotal.remove()
     }
 
-
-
-    /* nodoCarritoSubtotal.innerHTML = 
-    `<div>
-        <p>${extracion.titulo}</p>
-        <p>${extracion.totalProducto}${extracion.moneda}</p>
-    </div>`  */
-
 }
 
 export function pintadoPrecioTotal (instanciaCarrito){
+    console.log('OK')
     const extracionCarrito = instanciaCarrito.obtenerCarrito();
 
     let resultadoFinal = extracionCarrito.total;
@@ -136,6 +137,7 @@ export function pintadoPrecioTotal (instanciaCarrito){
     const nodoTotalConjunto = document.querySelector('#totalConjunto');
 
     nodoTotalConjunto.innerHTML = `<p>${resultadoFinal.toFixed(2)}${extracionCarrito.moneda}</p>`
+
 }
 
 

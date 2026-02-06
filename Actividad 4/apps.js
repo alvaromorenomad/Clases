@@ -47,12 +47,13 @@ fetch(URL_API).then((respuesta) => {
                     valor.textContent = productoIndividual.unidades;
                 }
 
-            pintadoInformacionProducto(productoIndividual,carrito,nodoProducto);
+                pintadoInformacionProducto(productoIndividual,carrito,  nodoProducto);
+                
+                pintadoPrecioTotal(carrito);
 
-            pintadoInformacionProductoCarrito(productoIndividual,carrito);
+                pintadoInformacionProductoCarrito(carrito);
 
-            pintadoPrecioTotal(carrito);
-
+                
             })
 
             const btnMenos = nodoProducto.querySelector(".btnMenos");
@@ -67,10 +68,11 @@ fetch(URL_API).then((respuesta) => {
                 }
                 
                 pintadoInformacionProducto(productoIndividual,carrito,nodoProducto);
-
-                pintadoInformacionProductoCarrito(productoIndividual,carrito);
-
+                
                 pintadoPrecioTotal(carrito);
+
+                pintadoInformacionProductoCarrito(carrito);
+
                 
             })
 

@@ -46,7 +46,7 @@ export class Carrito{
         return {
             carritoTotal: carritoFinal,
             total: sumaTotal,
-            moneda: carritoFinal[0].currency
+            moneda: carritoFinal[0].currency 
         }
     }
 
