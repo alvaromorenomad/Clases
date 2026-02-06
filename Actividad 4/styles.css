@@ -92,6 +92,7 @@ header {
     padding: 15px;
     font-weight: bold;
     cursor: pointer;
+    user-select: none;
 }
 
 .precio span {

@@ -75,8 +75,6 @@ export function pintaProducto (producto){
 export function pintadoInformacionProducto (producto, instanciaCarrito, contenedor) {
     const extracion = instanciaCarrito.obtenerInformacionProducto(producto);
 
-    //Pintado del subtotal
-
     const nodoTotal = contenedor.querySelector('.totalProducto span');
     nodoTotal.textContent = `${extracion.totalProducto}${extracion.moneda}`;
 
@@ -84,17 +82,6 @@ export function pintadoInformacionProducto (producto, instanciaCarrito, contened
         nodoTotal.textContent = `0${extracion.moneda}`;
     }
 
-    //pintado del subtotal en el carrito. Hay que hacerlo con innerHTML ya que createElement no sobreescribe y se acumulan las filas. Probado que creando fuera la estructura y utilizando la función solo para el valor NO funciona.
-
-    //Ahora no se acumula pero solo se pinta una linea, se sobre escribe. INTENTAR SEPARAR LOS DOS PINTADOS EN FUNCIONES DISTINTAS
-
-    /* const nodoCarritoSubtotal = document.querySelector('#carritoSubtotal');
-
-    nodoCarritoSubtotal.innerHTML = 
-    `<div>
-        <p>${extracion.titulo}</p>
-        <p>${extracion.totalProducto}${extracion.moneda}</p>
-    </div>` */
 }
 
 export function pintadoInformacionProductoCarrito (instanciaCarrito){
@@ -129,7 +116,7 @@ export function pintadoInformacionProductoCarrito (instanciaCarrito){
 }
 
 export function pintadoPrecioTotal (instanciaCarrito){
-    console.log('OK')
+   
     const extracionCarrito = instanciaCarrito.obtenerCarrito();
 
     let resultadoFinal = extracionCarrito.total;

@@ -6,6 +6,7 @@ export class Producto {
         this.sku= sku;
         this.precio = precio;
         this.currency = '€';
+        this.unidades = 0;
     }
     
 }

@@ -17,6 +17,8 @@ export class Carrito{
     restarUnidades(producto){
         if(producto.unidades > 0){
            producto.unidades--; 
+        }else{
+            producto.unidades === 0;
         }
     }
 

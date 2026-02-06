@@ -1,6 +1,6 @@
 'use strict'
 
-//FUNCIONAMIENTO BOTONES CANTIDAD
+//FUNCIONES DE PINTADO
 
 import { pintaProducto  } from "./modules/funcionesPintado.js";
 
@@ -31,7 +31,6 @@ fetch(URL_API).then((respuesta) => {
         for (const producto of datos.products){
             const productoIndividual = new Producto (producto.title,producto.SKU,producto.price);
             const nodoProducto = pintaProducto(productoIndividual)
-    
             
             const btnMas = nodoProducto.querySelector(".btnMas");
             btnMas.addEventListener("click", ()=> {
@@ -79,20 +78,6 @@ fetch(URL_API).then((respuesta) => {
             listaProductos.push(productoIndividual);  
               
         }
-
-        
- /*        listaProductos.forEach((producto) => {
-    
-            //const nodoProducto = pintaProducto(producto);
-            crearContador(nodoProducto,producto,listaProductos);
-            //let unidadesActuales = producto.actualizarUnidades();
-            //console.log(unidadesActuales)
-            }) */
-
-        
-        console.log(carrito.productos)
-        console.log(listaProductos[0].unidades);
-        window.listaProductos = listaProductos; 
-        })
+    })
 
 
